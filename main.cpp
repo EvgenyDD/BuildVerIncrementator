@@ -94,10 +94,10 @@ int main(int argc, char *argv[])
         workLog.append("#define BUILD_VERSION_MINOR     (");
         workLog.append(QString::number(verMinor));
         workLog.append(")\n\n");
-        workLog.append("#define BUILD_TIMESTAMP         (");
+        workLog.append("#define BUILD_TIMESTAMP         (\"");
         workLog.append(timeStamp);
-        workLog.append(")\n\n");
-        workLog.append("#define BUILD_NIMBER			(BUILD_VERSION_MAJOR * BUILD_VER_SCALER + BUILD_VERSION_MINOR)\n\n");
+        workLog.append("\")\n\n");
+        workLog.append("#define BUILD_NUMBER			(BUILD_VERSION_MAJOR * BUILD_VER_SCALER + BUILD_VERSION_MINOR)\n\n");
         workLog.append("#endif //_BUILD_VERSION_H\n");
 
         file.write(workLog);
